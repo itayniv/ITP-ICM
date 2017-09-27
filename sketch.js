@@ -1,6 +1,6 @@
 var a = 0;
 var r = 2;
-var sqSize = 70;
+var sqSize = 100;
 var sqX = 0;
 var sqY = 0;
 var currX = 0;
@@ -63,7 +63,9 @@ function draw() {
 
         noStroke();
         fill(60);
-        text("Xpos - " + currX + ", Ypos - " + currY, (currX-(sqSize)+10), (currY+sqSize));
+        textAlign(CENTER);
+        text("Xpos - " + currX + "\n" + "Ypos - " + currY,
+            (currX), (currY+sqSize-20));
 
         fill(100);
         ellipseMode(CENTER);
@@ -92,9 +94,12 @@ function draw() {
               ( mouseY > (currY - sqSize/2)) &&
               (mouseIsPressed)
               ){
-              //background(255);
+
               fill(60);
-              text("Xpos - " + currX + ", Ypos - " + currY, (currX-(sqSize)+10), (currY+sqSize));
+              textAlign(CENTER);
+              text("Xpos - " + currX + "\n" + "Ypos - " + currY,
+                  (currX), (currY+sqSize-20));
+
               fill(255,65,50);
               noStroke();
               ellipseMode(CENTER);
@@ -107,7 +112,6 @@ function draw() {
             }
 
 
-
               if ( ( mouseX < (currX + sqSize/2)) &&
                    ( mouseX > (currX - sqSize/2)) &&
                    ( mouseY < (currY + sqSize/2)) &&
@@ -118,12 +122,6 @@ function draw() {
                      fill(255,255,50);
                      noStroke();
                    }
-
-
-
-
-
-
 
 
 
