@@ -1,6 +1,6 @@
 var a = 0;
 var r = 2;
-var sqSize = 50;
+var sqSize = 70;
 var sqX = 0;
 var sqY = 0;
 var currX = 0;
@@ -30,10 +30,6 @@ function setup() {
 function draw() {
 
   background(255);
-
-
-
-
       	fill(20);
       	noStroke();
 
@@ -67,11 +63,11 @@ function draw() {
 
         noStroke();
         fill(60);
-        text("Xpos - " + currX + ", Ypos - " + currY, (currX-(sqSize)), (currY+sqSize)); // Text wraps within text box
+        text("Xpos - " + currX + ", Ypos - " + currY, (currX-(sqSize)+10), (currY+sqSize));
 
         fill(100);
-        rectMode(CENTER);
-        rect(sqX,sqY,sqSize,sqSize);
+        ellipseMode(CENTER);
+        ellipse(sqX,sqY,sqSize);
 
 
       //// hover state
@@ -82,8 +78,8 @@ function draw() {
 
               ) {
                 fill(200);
-                rectMode(CENTER);
-                rect(sqX,sqY,sqSize,sqSize);
+                ellipseMode(CENTER);
+                ellipse(sqX,sqY,sqSize);
                 //doesHover = true;
               }else{
                 //doesHover = false;
@@ -98,11 +94,11 @@ function draw() {
               ){
               //background(255);
               fill(60);
-              text("Xpos - " + currX + ", Ypos - " + currY, (currX-(sqSize)), (currY+sqSize));
+              text("Xpos - " + currX + ", Ypos - " + currY, (currX-(sqSize)+10), (currY+sqSize));
               fill(255,65,50);
               noStroke();
-              rectMode(CENTER);
-              rect(sqX,sqY,sqSize,sqSize);
+              ellipseMode(CENTER);
+              ellipse(sqX,sqY,sqSize);
               sqX = mouseX;
               sqY = mouseY;
               currY = mouseY;
